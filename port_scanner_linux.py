@@ -6,25 +6,28 @@
 
 # Note: You can run this with something like "python3 port_scanner_linux.py <ip>".
 
+# Importing modules.
 from datetime import datetime
 import socket
 import sys
 
-# Define the target machine.
+# Define the target machine (preferably with IP address).
 if len(sys.argv) == 2:
     target = socket.gethostbyname(sys.argv[1])
 else:
     print("You didn't put in the right number of arguments.")
     print("The syntax should be something like: python3 port_scanner_linux.py <IP address>.")
+    sys.exit()
 
 # Banner
-print("=" * 50)
+print("=" * 25 + "PORT SCANNER" + "=" * 25)
 print("Scanning target: " + target)
 print("Time started: " + str(datetime.now()))
+print("=" * 62)
 
 # Try attempting the port scan.
 try:
-    for port in range(50, 85):
+    for port in range(20, 444):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
         result = s.connect_ex((target, port)) #s.connect_ex is an error indicator.
