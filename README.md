@@ -10,6 +10,13 @@ Only using Python, this script uses the "socket" module (among others) to scan p
 
 ## Version History 
 
+**Version 1.0**  
+*5/7/2024*  
+* The program is (still) functional.
+* Added "PORT SCANNER" to the banner.
+* Changed the range of ports from 50-85 to 20-444; naturally, this makes the script take longer to complete.
+* Added a "sys.exit()" to the end of the if/else statement for the "Define the target machine" section.
+
 **Version 0.1**  
 *5/6/2024*  
 * This script is functional already, but I don't want to call it done yet.
